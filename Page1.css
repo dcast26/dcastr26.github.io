@@ -1,0 +1,113 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1a4b3;
+    margin: 0;
+  }
+h1{
+    font-family: 'Merriweather', serif;
+    color: #d6336c;
+}
+  .screen {
+    display: none;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1a4b3;
+  }
+  .screen p {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #f0f0f0;
+    width: 80%;
+    max-width: 600px; /* Set a maximum width for readability */
+    margin: 0 auto; /* Center the text */
+    line-height: 1.6;
+  }
+
+  .screen.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #letter-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5vw;
+  }
+  
+  #letter-group img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+  }
+  #letter-group img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #d6336c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  button:hover {
+    background-color: #c1275a;
+  }
+
+  #yesScreen img{
+    width: 235px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .carousel {
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .carousel-image.active {
+    opacity: 1;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 600px) {
+    .screen p {
+      font-size: 16px; /* Adjust font size for smaller screens */
+      width: 90%; /* Increase width for better readability */
+    }
+  
+    button {
+      font-size: 14px; /* Adjust button font size for smaller screens */
+    }
+  
+    .carousel {
+      height: 300px; /* Adjust height for smaller screens */
+    }
+  }
+

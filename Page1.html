@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="Page1.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <title>LLFGG</title>
+</head>
+<body>
+
+  <div id="screen1" class="screen active">
+    <h1>Love Letters To GG</h1>
+    <p>By Derek Castro</p>
+    <button onclick="nextScreen()">Next</button>
+  </div>
+
+  <div id="screen2" class="screen">
+    <div id="screen2-content">
+      <div id="letter-group">
+        <img id="letter1" src="images/letter-static.png" alt="letter" onclick="showLoveNote(1)">
+        <img id="letter2" src="images/letter-static.png" alt="letter" onclick="showLoveNote(2)">
+        <img id="letter3" src="images/letter-static.png" alt="letter" onclick="showLoveNote(3)">
+        <img id="letter4" src="images/letter-static.png" alt="letter" onclick="showLoveNote(4)">
+        <img id="letter5" src="images/letter-static.png" alt="letter" onclick="showLoveNote(5)">
+        <img id="letter6" src="images/letter-static.png" alt="letter" onclick="showLoveNote(6)">
+      </div>
+
+    </div>
+    <button id="valentineButton" onclick="valentineButton()" style="display: none;">Valentine</button>
+  </div>
+
+  <div id="luv1" class="screen" style="justify-content: space-evenly;">
+    <h1>The Beginning</h1>
+    <p>I remember how it felt the very first time I laid eyes on you. As I write this, 
+      I struggle to find the words to fully describe that moment. It was as if seeing 
+      you brought me a sense of calm and peace I had never known before. I never imagined 
+      that something so beautiful could make me feel as though I were at home, wrapped in 
+      a warm blanket during a winter storm. My pupils dilated, and all I could think was, “Wow.”
+      You were there in the corner, lost in your own little world, and all I wanted was to be a part 
+      of it. You looked serious, maybe even a little angry, but I soon learned that’s just how you are 
+      sometimes lol. That day, all I could think about was you, a beautiful girl named Grace.
+    </p>
+    <button onclick="backToScreen2()">Back</button>
+  </div>
+  <div id="luv2" class="screen" style="justify-content: space-evenly;">
+    <h1>Our dates</h1>
+    <p>The dates we went on were more than I could have ever asked for. You were shy, 
+      and I was nervous, but to me, they were perfect. I’ll never forget our trip to 
+      the aquarium, it made my day to see you so happy, touching the stingrays and pointing
+       out the fish you loved. Even when we walked what felt like miles trying to find where
+        I parked my car (despite me holding the ticket with the address the whole time), 
+        it was a day I wouldn’t change one bit. I remember being so worried you wouldn’t text me 
+        after that day. But no matter what we did, whether our dates were simple and short or long 
+        and chaotic, they were always perfect to me.
+    </p>
+    <button onclick="backToScreen2()">Back</button>
+  </div>
+  <div id="luv3" class="screen" style="justify-content: space-evenly;">
+    <h1>Together</h1>
+    <p>The day I asked you to be mine, you almost said no, telling me you weren’t sure.
+       Honestly, it made me nervous smh. But in the end, you decided to give me a chance, 
+       and I’ll always be grateful for that. “Imagine” by John Lennon was playing in the 
+       background, and from start to finish, we kissed. It might sound corny to say, but to me, 
+       it was like straight out of a movie.
+    </p>
+    <button onclick="backToScreen2()">Back</button>
+  </div>
+  <div id="luv4" class="screen" style="justify-content: space-evenly;">
+    <h1>You</h1>
+    <p>I love everything about you, the small and the big. I love the faces you make
+      when we're on a call, and somehow you expect me not to screenshot them. When you easily
+      predict how a movie will continue it's story and you voice your opinion on it
+      in a quiet theater full of people. How you randomly stare at me while I drive, 
+      somehow I feel my heart beating faster everytime you do that. You always know when to
+      boost my self-esteem.
+    </p>
+    <button onclick="backToScreen2()">Back</button>
+  </div>
+  <div id="luv5" class="screen" style="justify-content: space-evenly;">
+    <h1>Favorite Memories <br>(tap on photo)</h1>
+    <div class="carousel">
+      <img src="images/Aquarium.jpeg" alt="aquarium" class="carousel-image active">
+      <img src="images/Florida.jpeg" alt="florida" class="carousel-image">
+      <img src="images/NY.jpeg" alt="NY" class="carousel-image">
+      <img src="images/boat.jpg" alt="boat" class="carousel-image">
+      <img src="images/party.jpg" alt="party" class="carousel-image">
+      <img src="images/herhouse.jpg" alt="house" class="carousel-image">
+    </div>
+    <button onclick="backToScreen2()">Back</button>
+  </div>
+  <div id="luv6" class="screen" style="justify-content: space-evenly;">
+    <h1>The future</h1>
+    <p>Sometimes I worry about the future. I look at you, and I never want any 
+      kind of distance between us, but I know it's not realistic to think of the 
+      possibility of us being further away than we are now. But as much as that 
+      possibility may be, I know the sacrifice will pay off. What the future has 
+      for us is much greater than the obstacles we'll face, and I know you'll 
+      always be there with me.
+
+    </p>
+    <button onclick="backToScreen2()">Back</button>
+  </div>
+  <audio id="background-audio" src="sound/background.mp3"></audio>
+
+  <script src="script.js"></script>
+
+  <div id="valentineScreen" class="screen">
+    <h1>Will You Be My Valentine?</h1>
+
+    <div id="buttonChoice">
+      <button onclick="valentineYes()">Yes</button>
+      <button onclick="valentineNo()">No</button>
+    </div>
+  </div>
+
+  <div id="yesScreen" class="screen">
+    <img src="images/Firstday.jpeg" alt="firstDayImg">
+    <p>I love you so much</p>
+    <p>thank you for reading my love letters to you.</p>
+  </div>
+  <div id="noScreen" class="screen">
+    <img src="images/sad.gif" alt="sadGif">
+  </div>
+
+</body>
+</html>
